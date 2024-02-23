@@ -18,7 +18,7 @@ spec:
  containers:
  - name: user
    imagePullPolicy: Always
-   image: mshiva7396/shipping:k8
+   image: techworldwithsiva/shipping:k8
    ports:
    - containerPort: 8080
    envFrom:
