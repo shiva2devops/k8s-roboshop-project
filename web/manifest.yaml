@@ -10,7 +10,7 @@ spec:
  containers:
  - name: web
    imagePullPolicy: Always
-   image: mshiva7392/web:v1
+   image: mshiva7396/web:v1
    ports:
    - containerPort: 80
    resources:
