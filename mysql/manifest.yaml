@@ -48,7 +48,6 @@ kind: Service
 metadata:
   name: mysql
 spec:
-  type: LoadBalancer
   selector:
     name: mysql
     tier: db
