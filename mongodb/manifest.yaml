@@ -24,12 +24,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongodb-service
+  name: mongodb
 spec:
   selector:
     name: mongodb
     tier: db
   ports:
     - protocol: TCP
-      port: 27017
+      port: 80
       targetPort: 27017
