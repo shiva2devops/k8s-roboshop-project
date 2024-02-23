@@ -1,5 +1,12 @@
 ---
 apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: catalogue-config
+data:
+  MONGO_URL: "mongodb://mongodb:27017/catalogue"
+---
+apiVersion: v1
 kind: Pod
 metadata:
  name: catalogue
@@ -10,7 +17,7 @@ spec:
  containers:
  - name: catalogue
    imagePullPolicy: Always
-   image: mshiva7396/catalogue:k8
+   image: mshiva7396/catalogue:k8-1
    ports:
    - containerPort: 8080
    resources:
@@ -25,7 +32,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: catalogue-service
+  name: catalogue
 spec:
   selector:
     name: catalogue
